@@ -37,10 +37,10 @@ document.getElementById('number-8').addEventListener('click', () => displayValue
 document.getElementById('number-9').addEventListener('click', () => displayValue(9))
 
 document.getElementById('decimal').addEventListener('click', () => displayValue("."))
-document.getElementById('plus').addEventListener('click', displayValue('+'))
-document.getElementById('minus').addEventListener('click', displayValue('-'))
-document.getElementById('multiply').addEventListener('click', displayValue('*'))
-document.getElementById('divide').addEventListener('click', displayValue('/'))
+document.getElementById('plus').addEventListener('click', () => displayValue('+'))
+document.getElementById('minus').addEventListener('click', () => displayValue('-'))
+document.getElementById('multiply').addEventListener('click', () => displayValue('*'))
+document.getElementById('divide').addEventListener('click', () => displayValue('/'))
 
 
 document.getElementById('clear').addEventListener('click', () => clearScreen())
