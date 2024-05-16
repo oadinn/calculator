@@ -1,0 +1,88 @@
+body {
+    background-color: #033F63;
+    display: flex;
+    justify-content: center;
+    font-family: "Poetsen One";
+}
+
+#calc-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: #DCE0D9;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+#display-screen {
+    height: 90px;
+    width: 385px;
+    background-color: #00A896;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2.5rem;
+    padding: 0 15px 15px 0;
+    flex-direction: column;
+}
+
+p {
+    margin: 0;
+}
+#operation {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.button {
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    background-color: #028090;
+    font-family: "Poetsen One";
+    border: none;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.button:active {
+    transform: scale(0.95);
+    transition: .1s;
+}
+
+.operator,
+.equal,
+.decimal {
+    background-color: #114B5F;
+}
+#number-container {
+    display: grid;
+    height: 400px;
+    width: 400px;
+    padding: 5px;
+    gap: 5px;
+    grid-template-areas:
+      "clear backspace plus minus"
+      "seven eight nine multiply"
+      "four five six divide"
+      "one two three plus"
+      "zero decimal equal minus";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .clear, .backspace {
+    background-color: #FF3C38;
+  }
+
+  #number-0, #equal {
+    grid-column: span 2;
+  }
