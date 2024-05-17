@@ -73,7 +73,7 @@ const clearScreen = () => {
 const deleteOne = () => {
     if (result.textContent !== '') {
         const currentText = result.textContent
-        result.textContent = currentText
+        result.textContent = currentText.substring(0, currentText.length - 1)
     }
 }
 
@@ -98,4 +98,5 @@ document.getElementById('equal').addEventListener('click', () => calculate(resul
 
 
 document.getElementById('clear').addEventListener('click', () => clearScreen())
+document.getElementById('backspace').addEventListener('click', () => deleteOne())
 
